@@ -1,4 +1,4 @@
-#include "io.h"
+#include "../include/io.h"
 
 void affiche_trait (int c){
 	int i;
@@ -42,6 +42,21 @@ void debut_jeu(grille *g, grille *gc){
 				efface_grille(*g);
 				affiche_grille(*g);
 				break;
+			}
+			case 'n':
+			{
+				 printf("Entrez le nom de la nouvelle grille : ");
+
+                 char new_grille[50];
+                 scanf("%s",new_grille);
+                 printf("<%s>\n",new_grille);
+				 init_grille_from_file(new_grille , g );
+				 alloue_grille(g->nbl , g->nbc , gc );
+				 //nb_evolutions = 0 ;
+				 affiche_grille(*g);
+				 while (getchar()!='\n');
+               break ;
+
 			}
 			default : 
 			{ // touche non traitée
