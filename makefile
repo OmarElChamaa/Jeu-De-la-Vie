@@ -17,7 +17,7 @@ $(OPATH)/io.o : io.c
 $(OPATH)/jeu.o : jeu.c 
 	gcc -Wall -g -c $(SRC)/jeu.c
 clean:
-	rm -f prog *.o *.xz
+	rm -f prog *.o *.xz exe
 	@echo Clean!
 dist: 
 	tar -J -cvf Jeu_De_La_Vie.tar.xz $(SRC)/*.c  makefile
