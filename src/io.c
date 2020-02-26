@@ -1,4 +1,12 @@
 #include "../include/io.h"
+/**
+* \file io.c
+* \brief fichier src io.c
+* \version 1.0
+* \author El Chamaa Omar
+*/
+
+
 
 void affiche_trait (int c){
 	int i;

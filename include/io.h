@@ -1,3 +1,11 @@
+/**
+* \file io.h
+* \brief header file io.h
+* \version 1.0
+* \author El Chamaa Omar
+*/
+
+
 #ifndef __IO_H
 #define __IO_H
 
@@ -5,19 +13,42 @@
 #include "grille.h"
 #include "jeu.h"
 
-// affichage d'un trait horizontal
+/**
+ * \brief affichage d'un trait horizontal
+ * \param c \a int nombre de colonnes
+ */
+
 void affiche_trait (int c);
 
-// affichage d'une ligne de la grille
+/**
+* \brief affichage d'une ligne de la grille
+* \param c \a int :nombre de colonnes
+* \param l \a int :pointeur sur le nombre de lignes
+*/
+
 void affiche_ligne (int c, int* ligne);
 
-// affichage d'une grille
+
+/**
+ * \brief affichage d'une grille
+ * \param g \a grille : grille a afficher
+ */
+
 void affiche_grille (grille g);
 
-// effacement d'une grille
+/**
+ * \brief efface une grille
+ * \param g \a grille grille a effacer
+ */
+
 void efface_grille (grille g);
 
-// debute le jeu
+/**
+ * \brief debute le jeu
+ * \param g \a grille : grille choisie pour le jeu
+ * \param gc \a grille : copie temporaire de la grille
+ */
+
 void debut_jeu(grille *g, grille *gc);
 
 #endif
