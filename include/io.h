@@ -1,7 +1,7 @@
 /**
 * \file io.h
 * \brief header file io.h
-* \version 1.0
+* \version 2.0
 * \author El Chamaa Omar
 */
 
@@ -50,5 +50,15 @@ void efface_grille (grille g);
  */
 
 void debut_jeu(grille *g, grille *gc);
+
+/**
+* \brief compte ngr d'evolutions
+*/
+int nb_evolutions ;
+
+/**
+* \brief "booleen" pour tester si le vieillisement est active 0=vieillisement desactive , 1= active
+*/
+int vieux  ;
 
 #endif

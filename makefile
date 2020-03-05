@@ -24,7 +24,7 @@ dist:
 commit:
 	git commit -m "$m"
 doxyfile:
-	doxygen Doxyfile
+	doxygen 
 	
 
 

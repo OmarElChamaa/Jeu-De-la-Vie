@@ -1,11 +1,3 @@
-
-
-
-#include <stdio.h>
-#include "../include/grille.h"
-#include "../include/io.h"
-#include "../include/jeu.h"
-
 /**
 * \author El Chamaa Omar
 * \version 1.0
@@ -24,8 +16,16 @@
 
 
 
+#include <stdio.h>
+#include "../include/grille.h"
+#include "../include/io.h"
+#include "../include/jeu.h"
+
+
+
+
 int main (int argc, char ** argv) {
-	
+
 	if (argc != 2 )
 	{
 		printf("usage : main <fichier grille>");
@@ -36,7 +36,7 @@ int main (int argc, char ** argv) {
 	init_grille_from_file(argv[1],&g);
 	alloue_grille (g.nbl, g.nbc, &gc);
 	affiche_grille(g);
-	
+
 	debut_jeu(&g, &gc);
 
 	libere_grille(&g);

@@ -1,7 +1,7 @@
 /**
 * \file grille.h
 * \brief header file grille.h
-* \version 1.0
+* \version 2.0
 * \author El Chamaa Omar
 */
 
@@ -21,7 +21,7 @@
 */
 
 typedef struct {int nbl; int nbc; int** cellules;} grille;
- 
+
 /**
 * \brief fonction pour allouer la grille de taille l*c
 * \param l \a int :lignes
@@ -51,7 +51,7 @@ static inline void set_vivante(int i, int j, grille g){g.cellules[i][j] = 1;}
 /** rend morte la cellule (i,j) de la grille g */
 static inline void set_morte(int i, int j, grille g){g.cellules[i][j] = 0;}
 /** teste si la cellule (i,j) de la grille g est vivante*/
-static inline int est_vivante(int i, int j, grille g){return g.cellules[i][j] == 1;}
+static inline int est_vivante(int i, int j, grille g){return g.cellules[i][j] >= 1;}
 
 /**
 * \brief fonction pour copier ne grille sans allocation
