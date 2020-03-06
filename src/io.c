@@ -40,7 +40,6 @@ void affiche_grille (grille g){
 		affiche_ligne(c, g.cellules[i]);
 		affiche_trait(c);
 	}
-	printf("\n");
 	printf("Temps d'evolution : %d ",nb_evolutions);
 	if(cyclique==0)
 				{
