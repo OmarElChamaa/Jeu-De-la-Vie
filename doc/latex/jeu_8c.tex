@@ -1,0 +1,97 @@
+\hypertarget{jeu_8c}{}\doxysection{src/jeu.c File Reference}
+\label{jeu_8c}\index{src/jeu.c@{src/jeu.c}}
+
+
+fichier src \mbox{\hyperlink{jeu_8c}{jeu.\+c}}  
+
+
+{\ttfamily \#include \char`\"{}../include/jeu.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{jeu_8c_a919a35926d94b71717909ecc50233f26}{compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique}} (int i, int j, \mbox{\hyperlink{structgrille}{grille}} g)
+\begin{DoxyCompactList}\small\item\em Compte nb de voisins vivantscyclique . \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{jeu_8c_a2e8fdd206d197391527920bbbc137eef}{compte\+\_\+voisins\+\_\+vivants\+\_\+non\+\_\+cyclique}} (int i, int j, \mbox{\hyperlink{structgrille}{grille}} g)
+\begin{DoxyCompactList}\small\item\em Compte voisins non cyliques. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{jeu_8c_ada8f751a97ad1847db23c5ba17be7802}{evolue}} (\mbox{\hyperlink{structgrille}{grille}} $\ast$g, \mbox{\hyperlink{structgrille}{grille}} $\ast$gc)
+\begin{DoxyCompactList}\small\item\em fonction pour evoluer la grille d\textquotesingle{}un pas \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{jeu_8c_af587b56ea61a80b468caff5a89715cd7}\label{jeu_8c_af587b56ea61a80b468caff5a89715cd7}} 
+int($\ast$ {\bfseries compte\+\_\+voisins\+\_\+vivants} )(int, int, \mbox{\hyperlink{structgrille}{grille}}) = \mbox{\hyperlink{jeu_8c_a919a35926d94b71717909ecc50233f26}{compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+fichier src \mbox{\hyperlink{jeu_8c}{jeu.\+c}} 
+
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+El Chamaa Omar 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{jeu_8c_a919a35926d94b71717909ecc50233f26}\label{jeu_8c_a919a35926d94b71717909ecc50233f26}} 
+\index{jeu.c@{jeu.c}!compte\_voisins\_vivants\_cyclique@{compte\_voisins\_vivants\_cyclique}}
+\index{compte\_voisins\_vivants\_cyclique@{compte\_voisins\_vivants\_cyclique}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{compte\_voisins\_vivants\_cyclique()}{compte\_voisins\_vivants\_cyclique()}}
+{\footnotesize\ttfamily int compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{\mbox{\hyperlink{structgrille}{grille}}}]{g }\end{DoxyParamCaption})}
+
+
+
+Compte nb de voisins vivantscyclique . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i,j} & {\itshape cellule} \\
+\hline
+{\em g} & {\itshape grille} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nombre des voisins vivants cyclique 
+\end{DoxyReturn}
+\mbox{\Hypertarget{jeu_8c_a2e8fdd206d197391527920bbbc137eef}\label{jeu_8c_a2e8fdd206d197391527920bbbc137eef}} 
+\index{jeu.c@{jeu.c}!compte\_voisins\_vivants\_non\_cyclique@{compte\_voisins\_vivants\_non\_cyclique}}
+\index{compte\_voisins\_vivants\_non\_cyclique@{compte\_voisins\_vivants\_non\_cyclique}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{compte\_voisins\_vivants\_non\_cyclique()}{compte\_voisins\_vivants\_non\_cyclique()}}
+{\footnotesize\ttfamily int compte\+\_\+voisins\+\_\+vivants\+\_\+non\+\_\+cyclique (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{\mbox{\hyperlink{structgrille}{grille}}}]{g }\end{DoxyParamCaption})}
+
+
+
+Compte voisins non cyliques. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i,j} & {\itshape cellule} \\
+\hline
+{\em g} & {\itshape grille} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nombre de voisins vivants non cyclique 
+\end{DoxyReturn}
+\mbox{\Hypertarget{jeu_8c_ada8f751a97ad1847db23c5ba17be7802}\label{jeu_8c_ada8f751a97ad1847db23c5ba17be7802}} 
+\index{jeu.c@{jeu.c}!evolue@{evolue}}
+\index{evolue@{evolue}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{evolue()}{evolue()}}
+{\footnotesize\ttfamily void evolue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgrille}{grille}} $\ast$}]{g,  }\item[{\mbox{\hyperlink{structgrille}{grille}} $\ast$}]{gc }\end{DoxyParamCaption})}
+
+
+
+fonction pour evoluer la grille d\textquotesingle{}un pas 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & {\itshape grille} \+:grille initiale \\
+\hline
+{\em gc} & {\itshape grille} \+: copie temporaire de la grille \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nouvelle grille evoluee 
+\end{DoxyReturn}

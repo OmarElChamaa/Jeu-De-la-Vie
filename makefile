@@ -17,10 +17,10 @@ $(OPATH)/io.o : io.c
 $(OPATH)/jeu.o : jeu.c 
 	gcc -Wall -g -c $(SRC)/jeu.c
 clean:
-	rm -f prog *.o *.xz exe
+	rm -f prog *.o *.xz exe 
 	@echo Clean!
 dist: 
-	tar -J -cvf Jeu_De_La_Vie.tar.xz $(SRC)/*.c  makefile
+	tar -J -cvf ElChamaaOmar-GoL-v2.0.tar.xz $(SRC)/*.c  makefile Doxyfile include/*.h 
 commit:
 	git commit -m "$m"
 doxyfile:

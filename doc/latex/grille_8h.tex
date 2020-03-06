@@ -1,0 +1,108 @@
+\hypertarget{grille_8h}{}\doxysection{include/grille.h File Reference}
+\label{grille_8h}\index{include/grille.h@{include/grille.h}}
+
+
+header file \mbox{\hyperlink{grille_8h}{grille.\+h}}  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgrille}{grille}}
+\begin{DoxyCompactList}\small\item\em structure de la grille \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{grille_8h_ae621f51c60aa4fafaa0c9f6c9b5a4036}{alloue\+\_\+grille}} (int l, int c, \mbox{\hyperlink{structgrille}{grille}} $\ast$g)
+\begin{DoxyCompactList}\small\item\em fonction pour allouer la grille de taille l$\ast$c \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{grille_8h_a7074b2b15576e9d2b3cd15c3a1dc7012}{libere\+\_\+grille}} (\mbox{\hyperlink{structgrille}{grille}} $\ast$g)
+\begin{DoxyCompactList}\small\item\em fonction pour liberer une grille \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{grille_8h_adf5501cc0bbad28f5ffc561d92197e4e}{init\+\_\+grille\+\_\+from\+\_\+file}} (char $\ast$filename, \mbox{\hyperlink{structgrille}{grille}} $\ast$g)
+\begin{DoxyCompactList}\small\item\em fonction pour allouer et initialiser la grille \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{grille_8h_a63b3ae16c86b568f6aa8f9ce84128b1e}{copie\+\_\+grille}} (\mbox{\hyperlink{structgrille}{grille}} gs, \mbox{\hyperlink{structgrille}{grille}} gd)
+\begin{DoxyCompactList}\small\item\em fonction pour copier ne grille sans allocation \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+header file \mbox{\hyperlink{grille_8h}{grille.\+h}} 
+
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+El Chamaa Omar 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{grille_8h_ae621f51c60aa4fafaa0c9f6c9b5a4036}\label{grille_8h_ae621f51c60aa4fafaa0c9f6c9b5a4036}} 
+\index{grille.h@{grille.h}!alloue\_grille@{alloue\_grille}}
+\index{alloue\_grille@{alloue\_grille}!grille.h@{grille.h}}
+\doxysubsubsection{\texorpdfstring{alloue\_grille()}{alloue\_grille()}}
+{\footnotesize\ttfamily void alloue\+\_\+grille (\begin{DoxyParamCaption}\item[{int}]{l,  }\item[{int}]{c,  }\item[{\mbox{\hyperlink{structgrille}{grille}} $\ast$}]{g }\end{DoxyParamCaption})}
+
+
+
+fonction pour allouer la grille de taille l$\ast$c 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & {\itshape int} \+:lignes \\
+\hline
+{\em c} & {\itshape int} \+:colones \\
+\hline
+{\em $\ast$g} & {\itshape Grille} \+:pointeur sur la grille \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{grille_8h_a63b3ae16c86b568f6aa8f9ce84128b1e}\label{grille_8h_a63b3ae16c86b568f6aa8f9ce84128b1e}} 
+\index{grille.h@{grille.h}!copie\_grille@{copie\_grille}}
+\index{copie\_grille@{copie\_grille}!grille.h@{grille.h}}
+\doxysubsubsection{\texorpdfstring{copie\_grille()}{copie\_grille()}}
+{\footnotesize\ttfamily void copie\+\_\+grille (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgrille}{grille}}}]{gs,  }\item[{\mbox{\hyperlink{structgrille}{grille}}}]{gd }\end{DoxyParamCaption})}
+
+
+
+fonction pour copier ne grille sans allocation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gs} & {\itshape grille} \+: grille que l\textquotesingle{}on souhaite copier \\
+\hline
+{\em gd} & {\itshape grille} \+:grille ou on souhaite copier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{grille_8h_adf5501cc0bbad28f5ffc561d92197e4e}\label{grille_8h_adf5501cc0bbad28f5ffc561d92197e4e}} 
+\index{grille.h@{grille.h}!init\_grille\_from\_file@{init\_grille\_from\_file}}
+\index{init\_grille\_from\_file@{init\_grille\_from\_file}!grille.h@{grille.h}}
+\doxysubsubsection{\texorpdfstring{init\_grille\_from\_file()}{init\_grille\_from\_file()}}
+{\footnotesize\ttfamily void init\+\_\+grille\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{\mbox{\hyperlink{structgrille}{grille}} $\ast$}]{g }\end{DoxyParamCaption})}
+
+
+
+fonction pour allouer et initialiser la grille 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & {\itshape char} \+: Nom du fichier à partir du quel la grille doit être initialisee \\
+\hline
+{\em $\ast$g} & {\itshape grille} \+:pointeur sur la grille a initialiser \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{grille_8h_a7074b2b15576e9d2b3cd15c3a1dc7012}\label{grille_8h_a7074b2b15576e9d2b3cd15c3a1dc7012}} 
+\index{grille.h@{grille.h}!libere\_grille@{libere\_grille}}
+\index{libere\_grille@{libere\_grille}!grille.h@{grille.h}}
+\doxysubsubsection{\texorpdfstring{libere\_grille()}{libere\_grille()}}
+{\footnotesize\ttfamily void libere\+\_\+grille (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgrille}{grille}} $\ast$}]{g }\end{DoxyParamCaption})}
+
+
+
+fonction pour liberer une grille 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$g} & {\itshape grille} \+:pointeur sur la grille a liberer \\
+\hline
+\end{DoxyParams}

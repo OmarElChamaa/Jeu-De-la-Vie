@@ -40,6 +40,7 @@ void affiche_grille (grille g){
 		affiche_ligne(c, g.cellules[i]);
 		affiche_trait(c);
 	}
+	printf("\n");
 	printf("Temps d'evolution : %d ",nb_evolutions);
 	if(cyclique==0)
 				{
@@ -83,10 +84,10 @@ void debut_jeu(grille *g, grille *gc){
 			}
 			case 'n':
 			{
-				 printf("Entrez le nom de la nouvelle grille : ");
+				 printf("Entrez le chemin de la nouvelle grille: ");
 
                  char new_grille[50];
-                 scanf("%s",new_grille);
+                 scanf("/%s",new_grille);
                  printf("<%s>\n",new_grille);
 				 init_grille_from_file(new_grille , g );
 				 alloue_grille(g->nbl , g->nbc , gc );
