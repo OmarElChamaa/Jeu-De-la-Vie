@@ -87,7 +87,7 @@ void debut_jeu(grille *g, grille *gc){
 				 printf("Entrez le chemin de la nouvelle grille: ");
 
                  char new_grille[50];
-                 scanf("/%s",new_grille);
+                 scanf("%s",new_grille);
                  printf("<%s>\n",new_grille);
 				 init_grille_from_file(new_grille , g );
 				 alloue_grille(g->nbl , g->nbc , gc );
