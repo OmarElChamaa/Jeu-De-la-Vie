@@ -42,7 +42,7 @@ void affiche_grille (grille g){
 	}
 	printf("\n");
 	printf("Temps d'evolution : %d ",nb_evolutions);
-	if(cyclique==0)
+	if(cyclique==1)
 				{
                     printf("|| Voisinage cyclique Active ");
 				}
@@ -102,13 +102,13 @@ void debut_jeu(grille *g, grille *gc){
                  if(compte_voisins_vivants==compte_voisins_vivants_cyclique)
                  {
                     compte_voisins_vivants=compte_voisins_vivants_non_cyclique;
-                    cyclique =1 ;
+                    cyclique =0 ;
 
                  }
                  else
                  {
                      compte_voisins_vivants=compte_voisins_vivants_cyclique;
-                     cyclique =0;
+                     cyclique =1;
 
                  }
                  break ;

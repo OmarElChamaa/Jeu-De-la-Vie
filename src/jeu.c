@@ -123,7 +123,7 @@ void evolue (grille *g, grille *gc){
             }
 		}
 
-	if (cyclique==0)
+	if (cyclique==1)
 	{
 	compte_voisins_vivants=compte_voisins_vivants_cyclique;
 	}
