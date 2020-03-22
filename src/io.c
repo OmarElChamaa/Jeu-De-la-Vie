@@ -2,7 +2,7 @@
 /**
 * \file io.c
 * \brief fichier src io.c
-* \version 2.0
+* \version 3.0
 * \author El Chamaa Omar
 */
 
@@ -20,11 +20,13 @@ int i;
 	if (vieux==1) {
 		for (i=0; i<c; ++i) {
 			if (ligne[i] == 0 ) printf ("|   ");
+			else if (ligne[i] == -1) printf("| X "); // Non-viable
 			else printf ("| %d ", ligne[i]);
 		}
 	} else {
 		for (i=0; i<c; ++i) {
 			if (ligne[i] == 0 ) printf ("|   ");
+			else if (ligne[i] == -1) printf("| X "); // Non-viable
 			else printf ("| 0 ");
 		}
 	}

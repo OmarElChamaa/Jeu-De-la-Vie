@@ -1,6 +1,6 @@
 /**
 * \author El Chamaa Omar
-* \version 1.0
+* \version 3.0
 * \date 26/02/2020
 * \mainpage Jeu de la vie
 * \section intro_sec Introduction

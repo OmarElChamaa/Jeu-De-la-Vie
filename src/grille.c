@@ -1,7 +1,7 @@
 /**
 * \file grille.c
 * \brief fichier src grille.c
-* \version 2.0
+* \version 3.0
 * \author El Chamaa Omar
 */
 
@@ -48,7 +48,7 @@ void init_grille_from_file (char * filename, grille* g){
 	pfile = fopen(filename, "r");
 	assert (pfile != NULL);
 
-	int i,j,n,l,c,vivantes=0;
+	int i,j,n,l,c,vivantes,nonViables=0;
 
 	fscanf(pfile, "%d", & l);
 	fscanf(pfile, "%d", & c);
@@ -61,6 +61,12 @@ void init_grille_from_file (char * filename, grille* g){
 		fscanf(pfile, "%d", & j);
 		set_vivante(i,j,*g);
 	}
+	fscanf(pfile, "%d", &nonViables);
+		for (n=0; n < nonViables; ++n){
+			fscanf(pfile, "%d", & i);
+			fscanf(pfile, "%d", & j);
+			set_non_viable(i,j,*g);
+		}
 
 	fclose (pfile);
 	return;

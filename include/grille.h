@@ -1,7 +1,7 @@
 /**
 * \file grille.h
 * \brief header file grille.h
-* \version 2.0
+* \version 3.0
 * \author El Chamaa Omar
 */
 
@@ -52,6 +52,13 @@ static inline void set_vivante(int i, int j, grille g){g.cellules[i][j] = 1;}
 static inline void set_morte(int i, int j, grille g){g.cellules[i][j] = 0;}
 /** teste si la cellule (i,j) de la grille g est vivante*/
 static inline int est_vivante(int i, int j, grille g){return g.cellules[i][j] >= 1;}
+
+/** rend non viable la cellule (i,j) de la grille g */
+static inline int set_non_viable(int i, int j, grille g){return g.cellules[i][j] = -1;}
+
+/** teste si la cellule (i,j) de la grille g est non viable*/
+static inline int est_non_viable(int i, int j, grille g){return g.cellules[i][j] == -1;}
+
 
 /**
 * \brief fonction pour copier ne grille sans allocation
