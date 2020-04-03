@@ -36,6 +36,8 @@ Ce Projet est base sur "Conway's Game of Life". [WIKI](https://fr.wikipedia.org/
 - Dans le mode graphique, quand on veut rentrer une nouvelle grille avec la touche "n" ,
 certaines grilles s'inistialisent pas de la bonne facon.
 
+- Dans le mode graphique, le test d'oscillation marche pas seulement pour la grille 6.
+
 
 
 

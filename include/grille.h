@@ -68,4 +68,35 @@ static inline int est_non_viable(int i, int j, grille g){return g.cellules[i][j]
 
 void copie_grille (grille gs, grille gd);
 
+
+/**
+* \brief fonction pour tester la vacuite
+* \param *g \a grille :pointeur sur la grille a tester
+*/
+int grilleVide(grille *g);
+
+
+
+
+/**
+* \brief teste l'egalite de 2 grilles
+* \param gs \a grille : grille 1
+* \param gd \a grille : grille 2
+* \return int : 0 si elles sont egales 1 si elles ne le sont pas
+*/
+
+int grilleEg(grille g1,grille g2);
+
+/**
+* \brief test si une grille est oscillante
+* \bug si la grille est oscillante , le test retoune "Oscillante au bout de "nb_evolutions courant, et non pas celui ou on obtient l'oscillation
+* \bug si la grille n'est pas oscillante , le programme reste bloque dans la boucle
+* \bug Donc la fonction fonctionne (a moitie) que si la grille est oscillante
+* \bug Il faut faire evoluer la grille au moins 3/4 fois avant de declancher le test
+* \param g \a grille : grille a tester oscillation
+* \return retourne nb_evolutions pour obtenir oscillation si possible , -1 sinon
+ */
+int grilleOscillante(grille *g);
+
+
 #endif

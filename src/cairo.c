@@ -14,9 +14,10 @@
 /**
 * \file cairo.c
 * \brief fichier src cairo.c
-* \version 4.0
+* \version 5.0
 * \author El Chamaa Omar
 */
+
 
 
 
@@ -29,6 +30,8 @@
 
 void paint(cairo_surface_t *surface, grille g)
 {
+
+
 	// create cairo mask
 	cairo_t *cr;
 	cr=cairo_create(surface);
@@ -72,6 +75,31 @@ void paint(cairo_surface_t *surface, grille g)
     cairo_show_text(cr,temps);
 
 
+    cairo_set_font_size(cr, 13);
+    char oscill[200];
+    cairo_move_to(cr,150,170);
+    if (testoscillation==1){ //test si le test d'oscillation a ete active
+        if(oscillation!=-1)
+            {
+                if(oscillation==0){
+                sprintf(oscill,"La grille est oscillante depuis le debut ");
+                cairo_show_text(cr,oscill);
+                }
+                else{
+                sprintf(oscill,"La grille est oscillante au bout de %d evolutions" ,oscillation);
+                cairo_show_text(cr,oscill);
+                }
+
+
+            }
+       else
+            {
+                cairo_show_text(cr,"La grille n'est pas oscillante") ;
+
+            }
+    }
+
+
 	/*// line
 	cairo_set_source_rgb (cr, 1.0, 0.0, 0.0);
 	cairo_move_to (cr, 150.0, 160.0);
@@ -100,8 +128,6 @@ void paint(cairo_surface_t *surface, grille g)
 
 			else if(g.cellules[i][j]>1){
 				cairo_set_source_rgb(cr, 0.06, 0.18, 0.35);
-
-
 				}
 
 			else if (g.cellules[i][j]==-1)
@@ -172,10 +198,10 @@ int main (int argc, char *argv[]){
 	cs=cairo_xlib_surface_create(dpy, win, DefaultVisual(dpy, 0), SIZEX, SIZEY);
 
 
-
+    int run =1;
 
 	// run the event loop
-	while(1) {
+	while(run) {
 		XNextEvent(dpy, &e);
 		if(e.type==Expose && e.xexpose.count<1) {
 			paint(cs,g);
@@ -186,10 +212,9 @@ int main (int argc, char *argv[]){
 			       efface_grille(g);
 			       nb_evolutions ++ ;
 				   paint(cs,g);
-				   affiche_grille(g);
 			     }
 			     if(e.xbutton.button==3){
-					 break;
+					 run = 0 ;
 			     }
 		}
 
@@ -206,7 +231,6 @@ int main (int argc, char *argv[]){
 					nb_evolutions = 0 ;
 					while (getchar()!='\n');
 					paint(cs,g);
-					affiche_grille(g);
 
 			}
 			else
@@ -243,6 +267,22 @@ int main (int argc, char *argv[]){
 					}
 
                 }
+
+                if(e.xkey.keycode==XKeysymToKeycode(dpy,'o')) //touche pour verifier l'oscillation
+                        {
+                            if(testoscillation==0)
+                                {
+                                    testoscillation=1 ;
+                                    oscillation=grilleOscillante(&g) ;
+                                }
+                            else
+                                {
+                                    testoscillation = 0 ;
+                                }
+
+                        }
+
+
 
 
 

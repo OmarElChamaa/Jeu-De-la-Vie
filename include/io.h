@@ -1,7 +1,7 @@
 /**
 * \file io.h
 * \brief header file io.h
-* \version 4.0
+* \version 5.0
 * \author El Chamaa Omar
 */
 
@@ -60,5 +60,17 @@ int nb_evolutions ;
 * \brief "booleen" pour tester si le vieillisement est active 0=vieillisement desactive , 1= active
 */
 int vieux  ;
+
+/**
+* \brief "booleen" pour tester si la grille est oscillante oscillante>0,non oscillante=-1
+*/
+int oscillation;
+
+/**
+* \brief "booleen" pour tester si le test d'oscillation a ete active oui=1 , non =0
+*/
+
+int testoscillation ;
+
 
 #endif

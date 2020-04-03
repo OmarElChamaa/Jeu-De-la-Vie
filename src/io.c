@@ -2,9 +2,11 @@
 /**
 * \file io.c
 * \brief fichier src io.c
-* \version 4.0
+* \version 5.0
 * \author El Chamaa Omar
 */
+
+
 
 
 
@@ -62,6 +64,27 @@ void affiche_grille (grille g){
                     printf("|| Vieillisement Active");
 
                 }
+   if(testoscillation==1)
+                {
+                    if(oscillation!=-1){
+                        if(oscillation==0){
+                        printf("|| Oscillante des le debut ");
+                            testoscillation = 0;
+
+                        }else
+                        {
+                            printf("|| Oscillante au bout de : %d ",oscillation);
+                            testoscillation = 0;
+                        }
+                    }
+                    else
+                    {
+                    printf("|| La grille n'est pas oscillante ");
+                    testoscillation = 0;
+                    }
+
+
+                }
 
 	return;
 }
@@ -72,6 +95,7 @@ void efface_grille (grille g){
 
 void debut_jeu(grille *g, grille *gc){
 	char c = getchar();
+
 	while (c != 'q') // touche 'q' pour quitter
 	{
 		switch (c) {
@@ -129,6 +153,19 @@ void debut_jeu(grille *g, grille *gc){
 
                 }
                 break;
+            }
+            case 'o': //test oscillation
+            {
+                if(testoscillation==0){
+                    testoscillation=1;
+                    oscillation=grilleOscillante(g);
+                }
+                else{
+                    testoscillation=0;
+                }
+
+
+                break ;
             }
 
 
