@@ -20,6 +20,12 @@
 
 
 
+/**
+* \brief fonction afficher la grille en mode graphique
+* \param cairo_surface \a surface : Nom de la surface sur laquelle on va afficher la grille
+* \param *g  \a grille :pointeur sur la grille a afficher
+*/
+
 
 void paint(cairo_surface_t *surface, grille g)
 {

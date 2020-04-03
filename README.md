@@ -1,24 +1,43 @@
-El Chamaa Omar 
-S3 Info-Printemps
-				Je De La Vie 
+# *Je De La Vie* 
 
 
-Ce Projet est base sur "Conway's Game of Life".
+Ce Projet est base sur "Conway's Game of Life". [WIKI](https://fr.wikipedia.org/wiki/Jeu_de_la_vie)
 
 
--Pour compiler, tapez "Make".
+## Fonctionalites Makefile 
 
--Pour executer, tapez "./exe "chemin de la grille souhaitee "".
+- Pour compiler en mode texte, tapez "make MODE=TEXTE".
 
--Pour generer la documentation doxygen, tapez "doxygen" ou "make doxyfile" , la dcumentation se trouvera dans le fichier doc .
+- Pour compiler, tapez "make".
 
--Pour generer l'archive , tapez "make dist" .
+- Pour generer la documentation doxygen, tapez "doxygen" ou "make doxyfile" , la documentation se trouvera dans le fichier doc .
 
--Pour 'nettoyer' , tapez "make clean"
+- Pour generer l'archive , tapez "make dist" .
+
+- Pour 'nettoyer' , tapez "make clean".
+
+## Execution 
+- Pour executer en mode texte, tapez "./bin/exe "chemin de la grille souhaitee "".
+- Pour executer en mode graphique, tapez "./bin/cairo "chemin de la grille souhaitee "".
+
+## Usage
+- Touche "n": permet de charger une nouvelle grille depuis le fichier Grilles.
+
+- Touche "Entree" (mode texte) ou "Clic Droit" (mode Graphique) : permet de faire evoluer la grille.
+
+- Touche "v" : Descative/active le vieillissement des cellules. 
+
+- Touche "c" : Desactive/active le voisinage cyclique.
+
+#### Bugs 
+
+- Un bug d'affichage mineur a lieu si le terminal n'est pas en plein ecran dans le mode texte.
+
+- Dans le mode graphique, quand on veut rentrer une nouvelle grille avec la touche "n" ,
+certaines grilles s'inistialisent pas de la bonne facon.
 
 
 
-NB:Un bug d'affichage mineur a lieu si le terminal n'est pas en plein ecran.
 
 
 
