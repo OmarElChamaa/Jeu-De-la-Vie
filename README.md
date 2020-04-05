@@ -24,7 +24,7 @@ Ce Projet est base sur "Conway's Game of Life". [WIKI](https://fr.wikipedia.org/
 - Touche "n": permet de charger une nouvelle grille depuis le fichier Grilles.
 
 - Touche "Entree" (mode texte) ou "Clic Droit" (mode Graphique) : permet de faire evoluer la grille.
-
+.
 - Touche "v" : Descative/active le vieillissement des cellules. 
 
 - Touche "c" : Desactive/active le voisinage cyclique.
@@ -39,6 +39,10 @@ Ce Projet est base sur "Conway's Game of Life". [WIKI](https://fr.wikipedia.org/
 certaines grilles s'inistialisent pas de la bonne facon.
 
 - Dans le mode graphique, le test d'oscillation marche pas seulement pour la grille 6.
+
+
+######
+NB: Si le code a ete recupere a l'aide de l'archive , apres l'avoir extraite, veuillez bien creer des repertoires vides lib,obj, et doc.
 
 
 

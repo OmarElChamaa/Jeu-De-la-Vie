@@ -57,7 +57,7 @@ clean:
 	rm -f prog obj/*.o *.xz bin/exe bin/cairo  lib/*.a
 	@echo Clean!
 dist: 
-	tar -J -cvf ElChamaaOmar-GoL-v5.0.tar.xz $(SRC)/*.c  makefile Doxyfile include/*.h 
+	tar -J -cvf ElChamaaOmar-GoL-v5.0.tar.xz src  makefile Doxyfile include
 commit:
 	git commit -m "$m"
 doxyfile:
