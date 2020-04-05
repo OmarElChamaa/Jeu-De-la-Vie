@@ -29,6 +29,8 @@ Ce Projet est base sur "Conway's Game of Life". [WIKI](https://fr.wikipedia.org/
 
 - Touche "c" : Desactive/active le voisinage cyclique.
 
+- Touche "o" : Active le test d'oscillation.
+
 #### Bugs 
 
 - Un bug d'affichage mineur a lieu si le terminal n'est pas en plein ecran dans le mode texte.
